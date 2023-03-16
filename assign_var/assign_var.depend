@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1678949777 source:c:\c++\alpro\assign_var\main.cpp
+	<iostream>
+	"tugas.cpp"
+
+1678951640 source:c:\c++\alpro\assign_var\tugas.cpp
+	<iostream>
+
+1678950100 c:\c++\alpro\assign_var\tugas.cpp
+	<iostream>
+
