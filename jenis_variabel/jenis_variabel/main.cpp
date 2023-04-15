@@ -3,6 +3,7 @@
 using namespace std;
 int c; //variabel global
 int a=10;
+static int s=5;
 int contoh_global(){
     c = a; // tidak perlu di deklarasi
     return c;
@@ -34,7 +35,6 @@ int main ()
      // Memanggil fungsi contoh() untuk yang pertama
      x = contoh();
     x2 = contoh2();
-
      // Memanggil fungsi contoh() untuk yang kedua
      y = contoh();
     y2=contoh2();
@@ -43,10 +43,8 @@ int main ()
     z2 = contoh2();
      // Menampilkan nilai
      // Yang telah diproses di dalam fungsi
-     
     cout<<contoh_global()<<endl;
     cout<<"####################"<<endl;
-
     cout<<"Nilai pada pemanggilan pertama : "<<x<<endl;
      cout<<"Nilai pada pemanggilan kedua   : "<<y<<endl;
      cout<<"Nilai pada pemanggilan ketiga  : "<<z<<endl;

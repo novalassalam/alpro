@@ -1,0 +1,25 @@
+- bogo sort
+- bubble sort
+- selection sort
+- insertion sort
+- merge sort
+- linier searching
+- binary searching
+
+
+1. pengertian
+2. konsep (teori, notasi algoritmik, flow chart )
+3. kelebihan & kekurangan
+4. source code (step by step)
+
+
+nilai = [2,7,3,1,11,10,5]  asc
+
+angka 7
+
+
+
+FINAL
+
+membuat review dari apa yang tiap kelompok telah sampaikan 
+maksimal pengumpulan seminggu setelah uts
