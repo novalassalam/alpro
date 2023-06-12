@@ -10,7 +10,7 @@ typedef struct {
 typedef struct HitungBilangan2
 {
     int bilangan1,bilangan2;
-
+    
     void Hb2()
     {
         bilangan1 = 2;

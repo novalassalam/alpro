@@ -8,15 +8,15 @@ struct Mahasiswa {
     string jurusan;
 };
 
+
+
 void biasa() {
     // Membuat objek mahasiswa1 dengan tipe struct Mahasiswa
     struct Mahasiswa mahasiswa1;
-
     // Mengisi nilai pada variabel anggota objek mahasiswa1
     mahasiswa1.nama = "John Doe";
     mahasiswa1.umur = 20;
     mahasiswa1.jurusan = "Informatika";
-
     // Menampilkan nilai variabel anggota objek mahasiswa1
     cout << "Nama: " << mahasiswa1.nama << endl;
     cout << "Umur: " << mahasiswa1.umur << endl;
