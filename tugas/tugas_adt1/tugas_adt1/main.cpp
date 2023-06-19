@@ -50,9 +50,49 @@ void jawaban1(){
 }
 
 
+typedef struct LuasLingkaran
+{
+    int r;
+    float l;
+    
+    void hasil()
+    {
+        r = 2;
+        l = (22.0/7.0)*(r*r);
+        cout<< l<< endl;
+    }
+}Luas;
+
+
+typedef struct LuasLingkaran2
+{
+
+public:
+    int r;
+    float l;
+private:
+    float phi = 22.0/7.0;
+public:
+    // Metode untuk mengakses anggota private
+    float hasil()
+    {
+        r = 2;
+        l= phi*(r*r);
+        return l;
+    }
+} FungsiLuas;
+
+
+
 int main(){
     jawaban1();
     cout<<endl;
     jawaban2();
+    cout<<endl;
+    Luas luas;
+    luas.hasil();
+    cout<<endl;
+    FungsiLuas luase;
+    cout<<luase.hasil()<<endl;
     return 0;
 }

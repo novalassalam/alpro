@@ -18,6 +18,7 @@ typedef struct HitungBilangan2
         int hasil = bilangan1+bilangan2;
         cout<< hasil<< endl;
     }
+    
 } HitungBilangan2;
 
 //model3 panggil void kosong

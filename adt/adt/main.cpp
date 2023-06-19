@@ -6,9 +6,9 @@ struct Mahasiswa {
     string nama;
     int umur;
     string jurusan;
+    float nilai;
+    double nilai2;
 };
-
-
 
 void biasa() {
     // Membuat objek mahasiswa1 dengan tipe struct Mahasiswa
