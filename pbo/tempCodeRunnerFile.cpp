@@ -1,1 +1,1 @@
-n
+        cout << "Eating grass";

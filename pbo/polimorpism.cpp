@@ -2,7 +2,7 @@
 using namespace std;
 class Animal {
 public:
-    void eat() {
+    void eat() { 
         cout << "Eating";
     }
 };
