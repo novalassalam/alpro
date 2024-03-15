@@ -1,1 +1,1 @@
-        cout << "Eating grass";
+kecepatan
