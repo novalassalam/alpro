@@ -20,8 +20,8 @@ int main() {
 
     Mobil car;
 
-    // cout << mobil.kecepatan()<<endl; //error karena private
-    car.setKecepatan(100);
+    // cout << car.kecepatan<<endl; //error karena private
+    // car.setKecepatan(100);
     cout << "Kecepatan mobil: " << car.getKecepatan() << " km/h" << endl;
     return 0;
 }

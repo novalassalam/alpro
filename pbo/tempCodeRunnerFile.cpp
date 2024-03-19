@@ -1,1 +1,1 @@
-kecepatan
+[2]
