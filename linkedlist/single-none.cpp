@@ -20,6 +20,7 @@ int main() {
     if (newNode->next == nullptr) {
         cout << "Node baru tidak memiliki node selanjutnya" << endl;
     }
+    
 
 
     return 0;
