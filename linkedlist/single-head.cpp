@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // Definisi struktur node
@@ -32,6 +31,10 @@ int main() {
     }
 
     insertFirst(newNode, 10);
+
+    
+
+
     insertFirst(newNode, 20);
 
        // Menampilkan data dari linked list

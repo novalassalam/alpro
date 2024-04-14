@@ -39,6 +39,9 @@ int main() {
 
     // Memasukkan node baru di akhir linked list
     insertLast(newNode, 10);
+
+    0-10-20
+
     insertLast(newNode, 20);
 
     // Menampilkan data dari linked list

@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // Definisi struktur node
@@ -12,11 +11,11 @@ struct Node {
 
 int main() {
     // Membuat node-node awal dengan data
-    Node* head = new Node;
+    Node* head = new Node; //1
     head->data = 10;
-    head->next = new Node;
+    head->next = new Node; //2
     head->next->data = 20;
-    head->next->next = new Node;
+    head->next->next = new Node; //3
     head->next->next->data = 30;
     head->next->next->next = nullptr;
 
