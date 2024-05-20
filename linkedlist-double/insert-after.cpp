@@ -81,11 +81,11 @@ int main() {
     displayList(head);
 
     // Menambahkan satu node dengan nilai 10 ke linked list sebagai elemen terakhir
-    insertFirst(head, 10);
+    insertFirst(head, 7);
     displayList(head);
 
     // Menambahkan satu node dengan nilai 8 setelah node dengan nilai 10
-    insertAfter(head, 10, 8);
+    insertAfter(head, 7, 8);
 
     // Menampilkan informasi tentang setiap node dalam linked list
     displayList(head);

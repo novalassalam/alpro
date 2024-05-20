@@ -32,7 +32,6 @@ void insertLast(Node*& head, int data) {
         // Menyisipkan node baru setelah posisi terakhir
         current->next = newNode; // Mengatur next dari posisi terakhir menjadi node baru
         newNode->prev = current; // Mengatur prev dari node baru
-
     }
 }
 
@@ -62,6 +61,11 @@ int main() {
 
     // Menambahkan satu node dengan nilai 5 ke linked list
     insertLast(head, 7);
+    // Menampilkan informasi tentang setiap node dalam linked list
+    displayList(head);
+
+        // Menambahkan satu node dengan nilai 5 ke linked list
+    insertLast(head, 8);
     // Menampilkan informasi tentang setiap node dalam linked list
     displayList(head);
 

@@ -59,9 +59,9 @@ int main() {
     displayList(head);
 
 
-    // Menambahkan satu node dengan nilai 5 ke linked list
-    insertFirst(head, 8);
-    // Menampilkan informasi tentang setiap node dalam linked list
-    displayList(head);
+    // // Menambahkan satu node dengan nilai 5 ke linked list
+    // insertFirst(head, 8);
+    // // Menampilkan informasi tentang setiap node dalam linked list
+    // displayList(head);
     return 0;
 }
