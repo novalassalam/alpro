@@ -44,7 +44,8 @@ void deleteFirst(Node*& head) {
     Node* temp = head;
     // Ubah head menjadi node setelahnya
     head = head->next;
-    // Jika linked list hanya memiliki satu node
+
+    // Jika linked list head tidak null atau ada isinya
     if (head != nullptr) {
         head->prev = nullptr;
     }
@@ -79,5 +80,6 @@ int main() {
 
     deleteFirst(head);
     displayList(head);
+
     return 0;
 }

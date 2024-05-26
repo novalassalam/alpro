@@ -18,22 +18,7 @@ Node* createNode(int data) {
     return newNode;
 }
 
-// Fungsi untuk menyisipkan node sebagai elemen terakhir dalam linked list
-void insertLast(Node*& head, int data) {
-    Node* newNode = createNode(data);
-    if (head == nullptr) {
-        head = newNode; // Jika linked list kosong, node baru menjadi head
-    } else {
-        Node* current = head;
-        // Mencari posisi terakhir dalam linked list
-        while (current->next != nullptr) {
-            current = current->next;
-        }
-        // Menyisipkan node baru setelah posisi terakhir
-        current->next = newNode; // Mengatur next dari posisi terakhir menjadi node baru
-        newNode->prev = current; // Mengatur prev dari node baru
-    }
-}
+
 
 
 // Fungsi untuk menampilkan informasi tentang setiap node dalam linked list
@@ -50,6 +35,26 @@ void displayList(Node* head) {
     cout << "---------------------------------------" <<endl;
 }
 
+
+// Fungsi untuk menyisipkan node sebagai elemen terakhir dalam linked list
+void insertLast(Node*& head, int data) {
+    Node* newNode = createNode(data);
+    if (head == nullptr) {
+        head = newNode; // Jika linked list kosong, node baru menjadi head
+    } else {
+        Node* current = head;
+        // Mencari posisi terakhir dalam linked list
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        // Menyisipkan node baru setelah posisi terakhir
+        current->next = newNode; // Mengatur next dari posisi terakhir menjadi node baru
+        newNode->prev = current; // Mengatur prev dari node baru
+         // Menampilkan informasi tentang setiap node dalam linked list
+    }
+
+}
+
 int main() {
     // Inisialisasi pointer simpul
     Node* head = nullptr;
@@ -64,9 +69,8 @@ int main() {
     // Menampilkan informasi tentang setiap node dalam linked list
     displayList(head);
 
-        // Menambahkan satu node dengan nilai 5 ke linked list
+    //     // Menambahkan satu node dengan nilai 5 ke linked list
     insertLast(head, 8);
-    // Menampilkan informasi tentang setiap node dalam linked list
     displayList(head);
 
     return 0;

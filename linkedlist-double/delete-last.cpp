@@ -50,6 +50,7 @@ void deleteLast(Node*& head) {
 
     // Mencari node terakhir dalam linked list
     Node* current = head;
+
     while (current->next->next != nullptr) {
         current = current->next;
     }
