@@ -19,9 +19,9 @@ public:
 int main() {
 
     Mobil car;
-
+    // car.kecepatan
     // cout << car.kecepatan<<endl; //error karena private
-    // car.setKecepatan(100);
+    car.setKecepatan(100);
     cout << "Kecepatan mobil: " << car.getKecepatan() << " km/h" << endl;
     return 0;
 }

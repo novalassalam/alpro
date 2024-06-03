@@ -13,7 +13,7 @@ int linearSearch(int arr[], int n, int x) {
 }
 
 int main() {
-   int arr[] = {3, 5, 2, 9, 7, 6, 1, 7};
+   int arr[] = {3, 5, 2, 9, 7, 7, 1};
    int n = sizeof(arr) / sizeof(arr[0]);
    int x = 7;
    int result = linearSearch(arr, n, x);

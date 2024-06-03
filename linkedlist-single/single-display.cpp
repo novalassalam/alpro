@@ -3,7 +3,7 @@ using namespace std;
 
 // Definisi struktur node
 struct Node {
-    int data;   // Anggota untuk menyimpan data
+    string data;   // Anggota untuk menyimpan data
     Node* next; // Anggota untuk menunjukkan ke node selanjutnya
 };
 
@@ -12,11 +12,11 @@ struct Node {
 int main() {
     // Membuat node-node awal dengan data
     Node* head = new Node; //1
-    head->data = 10;
+    head->data = "ekonomi1";
     head->next = new Node; //2
-    head->next->data = 20;
+    head->next->data = "ekonomi2";
     head->next->next = new Node; //3
-    head->next->next->data = 30;
+    head->next->next->data = "ekonomi3";
     head->next->next->next = nullptr;
 
     // Menampilkan isi linked list

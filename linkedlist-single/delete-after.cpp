@@ -12,12 +12,16 @@ struct Node {
 // Fungsi untuk menghapus elemen setelah elemen dengan nilai tertentu dari linked list
 void deleteAfter(Node* head, int value) {
     Node* prev = head;
+    cout << prev<< " ";
     while (prev != nullptr && prev->data != value) { // Cari node dengan nilai value
         prev = prev->next;
+        cout << prev<< " ";
     }
+    // cout << prev<< " ";
     if (prev != nullptr && prev->next != nullptr) {  // Jika node dengan nilai value ditemukan dan memiliki node setelahnya
         Node* target = prev->next;                  // Simpan node yang akan dihapus
-        prev->next = target->next;              // Hubungkan node sebelumnya dengan node setelah node yang akan dihapus
+        cout << target << " ";
+        prev->next = target->next;                  // Hubungkan node sebelumnya dengan node setelah node yang akan dihapus
         delete target;                              // Hapus node yang akan dihapus
     } else {
         cout << "Element with value " << value << " not found or does not have a node after it." << endl;
@@ -29,8 +33,8 @@ void printList(Node* head) {
     cout << "Linked list: ";
     Node* prev = head;
     while (prev != nullptr) {
-        cout << prev->data << " "; // Mencetak data node
-        prev = prev->next; // Pindah ke node selanjutnya
+            cout << prev->data << " "; // Mencetak data node
+            prev = prev->next; // Pindah ke node selanjutnya
     }
     cout << endl;
 }

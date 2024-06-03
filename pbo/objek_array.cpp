@@ -13,7 +13,10 @@ public:
 
 int main() {
     // Membuat objek dari kelas Object
-    Obj ob[1];
+    Obj ob[2];
+
+    
+
 
     ob[0].name[0]='mhs1';
 

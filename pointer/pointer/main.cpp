@@ -14,7 +14,6 @@ void deference()
   cout<<"Alamat x = "<<xPtr<<endl;
   cout<<"Nilai yang disimpan pada alamat ";
   cout<<xPtr<<" adalah "<<*xPtr;
-    
 }
 
 void reference(){
