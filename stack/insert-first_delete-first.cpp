@@ -85,6 +85,6 @@ int main() {
 
     // Coba pop dari stack kosong
     pop();
-
+     displayStack();
     return 0;
 }
