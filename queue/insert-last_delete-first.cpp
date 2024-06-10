@@ -6,16 +6,18 @@ using namespace std;
 struct Qnode {
     int data;
     Qnode* next;
+
 };
 
-// Struktur List untuk menyimpan head dan tail dari queue
+// Struktur List untuk menyimpan head dan front dari queue
 struct List {
-    Qnode* head;
-    Qnode* tail;
+    Qnode* head;//buat manggil
+    Qnode* front;
+    Qnode* rear;
 };
 
 // Inisialisasi queue
-List queue = {nullptr, nullptr};
+List queue = {nullptr, nullptr,nullptr};
 
 // Fungsi untuk mengecek apakah queue kosong
 bool IsEmpty() {
@@ -35,10 +37,15 @@ void Enqueue(int data) {
 
     if (IsEmpty()) {
         queue.head = newNode;
-        queue.tail = newNode;
+        queue.front = newNode;
+        queue.rear = newNode;
     } else {
-        queue.tail->next = newNode;
-        queue.tail = newNode;
+        Qnode* current = queue.head;
+        while(current->next != nullptr){
+            current = current->next;
+        }
+        current->next = newNode;
+        queue.rear = newNode;
     }
     cout << "Enqueued: " << data << endl;
 }
@@ -52,7 +59,10 @@ void Dequeue() {
     Qnode* temp = queue.head;
     queue.head = queue.head->next;
     if (queue.head == nullptr) { // Jika queue menjadi kosong setelah dequeue
-        queue.tail = nullptr;
+        queue.rear = nullptr;
+        queue.front = nullptr;
+    }else{
+        queue.front = queue.head;
     }
     cout << "Dequeued: " << temp->data << endl;
     delete temp;
@@ -67,6 +77,8 @@ void displayQueue() {
     Qnode* current = queue.head;
     cout << "Isi queue:" << endl;
     while (current != nullptr) {
+        cout << "Front: " << queue.front->data << endl;
+        cout << "Rear: " << queue.rear->data << endl;
         cout << "Alamat: " << current << endl;
         cout << "Nilai: " << current->data << endl;
         cout << "Alamat next: " << current->next << endl << endl;
@@ -83,13 +95,14 @@ int main() {
 
     // Enqueue beberapa elemen ke dalam queue
     Enqueue(10);
+    displayQueue();
     Enqueue(20);
+    displayQueue();
     Enqueue(30);
-
-    // Menampilkan isi queue
     displayQueue();
 
-    // Dequeue beberapa elemen dari queue
+
+    // // Dequeue beberapa elemen dari queue
     Dequeue();
     displayQueue();
 
@@ -99,8 +112,8 @@ int main() {
     Dequeue();
     displayQueue();
 
-    // Coba dequeue dari queue kosong
-    Dequeue();
+    // // Coba dequeue dari queue kosong
+    // Dequeue();
 
     return 0;
 }

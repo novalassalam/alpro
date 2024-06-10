@@ -8,14 +8,15 @@ struct Qnode {
     Qnode* next;
 };
 
-// Struktur List untuk menyimpan head dan tail dari queue
+// Struktur List untuk menyimpan head dan front dari queue
 struct List {
-    Qnode* head;
-    Qnode* tail;
+    Qnode* head;//buat manggil
+    Qnode* front;
+    Qnode* rear;
 };
 
 // Inisialisasi queue
-List queue = {nullptr, nullptr};
+List queue = {nullptr, nullptr, nullptr}; //head, front, rear
 
 // Fungsi untuk mengecek apakah queue kosong
 bool IsEmpty() {
@@ -35,34 +36,42 @@ void Enqueue(int data) {
 
     if (IsEmpty()) {
         queue.head = newNode;
-        queue.tail = newNode;
+        queue.front = newNode;
+        queue.rear = newNode;
     } else {
         queue.head = newNode;
+        queue.rear = newNode;
     }
     cout << "Enqueued: " << data << endl;
+
 }
 
 // Fungsi untuk dequeue (menghapus elemen dari akhir queue)
 void Dequeue() {
+
     if (IsEmpty()) {
         cout << "Queue kosong, tidak ada yang di-dequeue" << endl;
         return;
     }
 
-    if (queue.head == queue.tail) { // Jika hanya ada satu elemen di queue
-        cout << "Dequeued: " << queue.tail->data << endl;
-        delete queue.tail;
+
+    if (queue.head->next == nullptr) { // Jika hanya ada satu elemen di queue
+        cout << "Dequeued 1: " << queue.rear->data << endl;
+        Qnode* temp = queue.head;
         queue.head = nullptr;
-        queue.tail = nullptr;
-    } else {
+        queue.rear = nullptr;
+        queue.front = nullptr;
+    }
+    else {
         Qnode* current = queue.head;
-        while (current->next != queue.tail) {
+        while (current->next != nullptr) {
+            queue.front = current;
             current = current->next;
         }
-        cout << "Dequeued: " << queue.tail->data << endl;
-        delete queue.tail;
-        queue.tail = current;
-        queue.tail->next = nullptr;
+        Qnode* temp = current;
+        cout << "Dequeued 2: " << current->data << endl;
+        queue.front->next = nullptr;
+        delete temp;
     }
 }
 
@@ -75,6 +84,8 @@ void displayQueue() {
     Qnode* current = queue.head;
     cout << "Isi queue:" << endl;
     while (current != nullptr) {
+        cout << "Front: " << queue.front->data << endl;
+        cout << "Rear: " << queue.rear->data << endl;
         cout << "Alamat: " << current << endl;
         cout << "Nilai: " << current->data << endl;
         cout << "Alamat next: " << current->next << endl << endl;
@@ -91,13 +102,13 @@ int main() {
 
     // Enqueue beberapa elemen ke dalam queue
     Enqueue(10);
+    displayQueue();
     Enqueue(20);
+    displayQueue();
     Enqueue(30);
-
-    // Menampilkan isi queue
     displayQueue();
 
-    // Dequeue beberapa elemen dari queue
+    // // Dequeue beberapa elemen dari queue
     Dequeue();
     displayQueue();
 
@@ -106,7 +117,6 @@ int main() {
 
     Dequeue();
     displayQueue();
-
     // Coba dequeue dari queue kosong
     Dequeue();
 
