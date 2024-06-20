@@ -17,7 +17,6 @@ int main() {
     head->prev->next = new ListNode('C'); //LEAF left
 
 
-
     cout<< "root : "<< head->val << endl;
     cout<< "child 1 (left) : "<< head->prev->val << endl;
     cout<< "child 2 (right) : "<< head->next->val << endl;
