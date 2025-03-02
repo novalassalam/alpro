@@ -4,7 +4,7 @@ using namespace std;
 // Superclass
 class Hewan {
 public:
-    void suara() {
+    void bersuara() {
         cout << "Hewan mengeluarkan suara" << endl;
     }
 };
@@ -19,7 +19,7 @@ public:
 
 int main() {
     Kucing cat; // Membuat objek dari kelas Kucing
-    cat.suara(); // Memanggil metode dari kelas Hewan (kelas induk)
+    cat.bersuara(); // Memanggil metode dari kelas Hewan (kelas induk)
     cat.bunyi(); // Memanggil metode dari kelas Kucing (kelas anak)
     return 0;
 }
