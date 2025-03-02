@@ -3,23 +3,24 @@ using namespace std;
 
 class Mobil {
 private:
-    int kecepatan;
+    int kecepatan; //disembunyikan
 
 public:
-    void setKecepatan(int kecepatanBaru) {
-        kecepatan = kecepatanBaru; // cara set private dari private
+    void setKecepatan(int kecepatanBaru) { // setting
+        kecepatan = 1;
+        cout << kecepatan <<endl;
+        kecepatan = kecepatanBaru;
     }
-
-    int getKecepatan() {
+    int getKecepatan() { //geting
         return kecepatan;
     }
 
 };
 
+
 int main() {
 
     Mobil car;
-    // car.kecepatan
     // cout << car.kecepatan<<endl; //error karena private
     car.setKecepatan(100);
     cout << "Kecepatan mobil: " << car.getKecepatan() << " km/h" << endl;

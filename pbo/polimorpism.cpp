@@ -2,14 +2,14 @@
 using namespace std;
 class Animal {
 public:
-    void eat() { 
+    virtual void eat() { // virtual keyword is crucial for polymorphism
         cout << "Eating";
     }
 };
 
 class Goat: public Animal {
 public:
-    void eat() { // letak polomorpism dimanipulasi fungsi eatnya
+    void eat() override { // letak polomorpism dimanipulasi fungsi eatnya
         cout << "Eating grass";
     }
 };
