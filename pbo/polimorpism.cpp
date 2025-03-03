@@ -14,8 +14,8 @@ public:
     }
 };
 
-int main(void) {
-    Goat g = Goat();
+int main() {
+    Goat g;
     g.eat(); // Output: "Eating grass"
     return 0;
 }
