@@ -1,4 +1,4 @@
-#include <iostream>  //header yang dibutuhkan untuk “kegiatan” input dan output
+#include <iostream>  //header yang dibutuhkan untuk ï¿½kegiatanï¿½ input dan output
 using namespace std; // semua yang ada dalam namespace std (standard),
 
 int penjumlahan_fungsi(int a, int b) // fungsi
@@ -85,7 +85,6 @@ int main() // fungsi utama
     cout << "Prosedur" << endl;
     penjumlahan_prosedur();
     cout << "\n"<< endl;
-
 
     cout << "Fungsi" << endl;
     cout << inputan() << endl;

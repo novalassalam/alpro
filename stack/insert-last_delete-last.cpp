@@ -51,9 +51,9 @@ void pop() {
         while (current->next->next != nullptr) {
             current = current->next;
         }
-        cout << "Popped: " << current->next->data << endl;
         delete current->next;
         current->next = nullptr;
+        cout << "Popped: " << current->next->data << endl;
     }
 }
 

@@ -4,5 +4,5 @@ nomorRekening (string, private)
 saldo (double, private)
 namaPemilik (string, private)
 Buatlah method-method public yang diperlukan untuk:
-Mengatur nilai namaPemilik (setter).
+Mengatur nilai namaPemilik, saldo, nomorRekening(setter).
 Menampilkan informasi akun (method tampilkanInfo()).

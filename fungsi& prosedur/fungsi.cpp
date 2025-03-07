@@ -81,7 +81,7 @@ void arrays(int x)
 
 int main() // fungsi utama
 {
-    // cout<<"hallo world"<<endl;
+    cout<<"hallo world"<<endl;
 
     cout << "Prosedur" << endl;
     penjumlahan_prosedur();
