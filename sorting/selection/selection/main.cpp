@@ -1,38 +1,42 @@
 #include <iostream>
 using namespace std;
 
-// Fungsi untuk melakukan selection sort pada array arr dengan panjang n
-void selectionSort(int arr[], int n) {
-    int i, j, min_idx;
-    // i Loop untuk setiap elemen kecuali elemen terakhir
-    for (i = 0; i < n-1; i++) {
-        min_idx = i;
-        // j Loop untuk mencari elemen terkecil dalam array yang belum diurutkan
-        for (j = i+1; j < n; j++) {
-            if (arr[j] > arr[min_idx]) {
-                min_idx = j;
-            }
-        }
-        // Menukar elemen terkecil dengan elemen pertama dalam bagian yang belum diurutkan
-        swap(arr[min_idx], arr[i]);
-        // Mencetak langkah pengurutan saat ini
-        cout << "Step " << i+1 << ": ";
-        // Mencetak array setelah setiap langkah pengurutan
-        for (int k = 0; k < n; k++) {
-            cout << arr[k] << " ";
-        }
-        cout << endl; // Pindah baris
-    }
-}
-
-
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    for (int i = 0; i < n; ++i) {
-        cout << arr[i] << " ";
+// Fungsi prosedur untuk menampilkan array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";  // Cetak setiap elemen array
     }
     cout << endl;
-    selectionSort(arr, n);
+}
+
+// Fungsi prosedur untuk melakukan Selection Sort dan menampilkan step perpindahan
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {          // Loop untuk setiap elemen
+        int minIndex = i;                    // Asumsikan elemen terkecil adalah elemen ke-i
+        for (int j = i+1; j < n; j++) {     // Cari elemen terkecil dari sisa array
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;               // Update indeks elemen terkecil
+            }
+        }
+        if (minIndex != i) {                 // Jika elemen terkecil bukan elemen ke-i
+            cout << "   Tukar " << arr[i] << " dan " << arr[minIndex] << ": ";
+            swap(arr[i], arr[minIndex]);     // Tukar elemen menggunakan swap bawaan
+            printArray(arr, n);             // Tampilkan array setelah penukaran
+        }
+    }
+}
+int main() {
+    int arr[] = {64 , 34 ,25 ,12 ,22 ,11 ,90};  // Array yang akan diurutkan
+    int n = sizeof(arr)/sizeof(arr[0]); // Hitung ukuran array
+
+    cout << "Array sebelum diurutkan: ";
+    printArray(arr, n);  // Tampilkan array sebelum diurutkan
+
+    cout << "\nProses Selection Sort ASC:\n";
+    selectionSort(arr, n);  // Panggil fungsi Selection Sort
+
+    cout << "\nArray setelah diurutkan: ";
+    printArray(arr, n);  // Tampilkan array setelah diurutkan
+
     return 0;
 }
