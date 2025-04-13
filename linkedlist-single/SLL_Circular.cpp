@@ -18,15 +18,19 @@ int main() {
     head->next->data = "ekonomi2";
     head->next->next = new Node; //3
     head->next->next->data = "ekonomi3";
-    head->next->next->next = nullptr;
+    head->next->next->next = head;
 
     // Menampilkan isi linked list
     cout << "Isi linked list:" << endl;
-    while (head != nullptr) {
-        cout << head->data << " " <<endl;
-        cout << head->next << " " <<endl;
-        head = head->next;
-    }
+
+    Node* current = head;
+
+    do {
+       cout << current->data << " " <<endl;
+       cout << current->next << " " <<endl;
+       current = current->next;
+    } while(current != head);
+
 
     return 0;
 }
