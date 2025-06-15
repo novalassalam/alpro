@@ -1,10 +1,5 @@
 submission
 tugas
-tugas/
-tugas/*
-
-/tugas/
-/tugas/*
 
 **/tempCodeRunnerFile.cpp
 
@@ -15,7 +10,4 @@ tugas/*
 
 
 uas/
-uas
-uas/*
-/uas/
-/uas/*
+
