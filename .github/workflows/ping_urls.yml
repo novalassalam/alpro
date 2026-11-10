@@ -20,3 +20,5 @@ jobs:
           curl -I https://rahayuningpuspita-deteksi-objek-sepakbola.hf.space
           curl -I https://ameliafridaa-cv-uas.hf.space
           curl -I https://ivann043-mhr-clasification.hf.space
+          curl -I https://vavaia-lesion-unet-api.hf.space
+          
